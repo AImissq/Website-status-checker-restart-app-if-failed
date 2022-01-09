@@ -10,7 +10,7 @@ re-launches a httpd apache server, you could substitute whatever you wanted here
 #!/bin/sh
 
 /usr/bin/curl -s --head  --request GET https://sitetocheck.com | if ! grep "200 OK"; then
-exec pm2 restart 0
+ pm2 restart 0
 
 fi
 
